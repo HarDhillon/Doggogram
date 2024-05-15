@@ -1,5 +1,6 @@
 import React from "react"
 import Card from "./card"
+import Pagination from "./pagination"
 import { fetchPostPages, fetchPosts } from "../lib/actions"
 
 export default async function CardWrapper({ currentPage }) {
@@ -16,7 +17,9 @@ export default async function CardWrapper({ currentPage }) {
             <div className='flex flex-wrap justify-between'>
                 {renderedCards}
             </div>
-
+            <div>
+                <Pagination totalPages={totalPages} />
+            </div>
         </>
     )
 }
