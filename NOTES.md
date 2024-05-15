@@ -1,0 +1,3 @@
+- Need to add proper error handling in case API is unreachable or returns non okay status code.
+- Need to add unit tests to ensure changes do not break app.
+- Improve look of overall components / page. Including skeleton to look more like actual card.
