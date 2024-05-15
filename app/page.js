@@ -8,11 +8,10 @@ export default async function Page({ searchParams }) {
 
   return (
     <>
-      <div>
-        NavBar
+      <div className='flex justify-center mt-2 mb-6'>
+        <h1 className='text-2xl'>Doggogram</h1>
       </div>
-
-      <div>
+      <div className='max-w-screen-xl m-auto mt-2 mb-4'>
         <Suspense fallback={<CardsSkeleton />}>
           <CardWrapper currentPage={currentPage} />
         </Suspense>

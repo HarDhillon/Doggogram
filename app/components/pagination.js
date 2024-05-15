@@ -20,8 +20,8 @@ export default function Pagination({ totalPages }) {
     const allPages = generatePagination(currentPage, totalPages);
 
     return (
-        <>
-            <div className="inline-flex">
+        <div className='flex'>
+            <div className="inline-flex m-auto">
                 <PaginationArrow
                     direction="left"
                     href={createPageURL(currentPage - 1)}
@@ -56,7 +56,7 @@ export default function Pagination({ totalPages }) {
                     isDisabled={currentPage >= totalPages}
                 />
             </div>
-        </>
+        </div>
     );
 }
 

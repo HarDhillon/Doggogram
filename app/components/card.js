@@ -37,20 +37,22 @@ export default function Card({ postData }) {
     };
 
     return (
-        <div className='card mb-10 shadow-md w-[calc(33%-2rem)]'>
+        <div className='card rounded mb-10 shadow-md lg:w-[calc(33%-2rem)] sm:w-[calc(50%-2rem)]'>
             <Image
                 src={post.image}
                 alt=''
                 width={600}
                 height={600}
                 style={{ objectFit: "cover", }}
-                className='rounded aspect-square w-full'
+                className='rounded-t aspect-square w-full'
             />
             <div className='post-info p-5'>
-                <Button liked={liked} handleLike={handleLike}></Button>
-                <p>{post.likes}</p>
+                <div className='flex mb-3'>
+                    <Button liked={liked} handleLike={handleLike}></Button>
+                    <p className='ml-1'>{post.likes}</p>
+                </div>
                 <p className='font-bold'>{post.username}:</p>
-                <p className='ml-2'>{post.caption}</p>
+                <p className='ml-0 text-sm'>{post.caption}</p>
             </div>
         </div>
     )
